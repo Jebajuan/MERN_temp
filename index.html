@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Welcome to my rough Portfolio</h1>
-    <h3>Small intro</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ducimus voluptatum ullam delectus quisquam totam doloremque vel modi, nesciunt, dolores labore sed accusantium obcaecati voluptas eveniet amet non, hic adipisci magni suscipit sit quod eum earum tempore. Voluptatibus maiores, dignissimos illo tempore deleniti voluptates esse, doloremque, doloribus incidunt illum facilis beatae! Ipsum alias tempora iste quia neque temporibus ea nisi.</p>
-    <hr>
-    <h3>Links</h3>
-    <li><a href="https://leetcode.com/u/Jebajuan_Samuel/">My Leetcode</a></li>
-    <li><a href="https://github.com/Jebajuan">My Github</a></li>
-    <li><a href="https://www.linkedin.com/in/jebajuan-samuel-a832b825b/">My LinkedIn</a></li>
-    <li>My Gmail: jebaimmanuel@gmail.com</li>
-    <br>
-    <ul>
-        <h3>My Skills</h3>
-        <li>Java,C</li>
-        <li>Data Structures</li>
-        <li>MySql</li>
-        <li>HTML,CSS</li>
-    </ul>
-    <ul>
-        <h3>Languages Known</h3>
-        <li>English</li>
-        <li>Tamil</li>
-    </ul>
+    <h1>Registration</h1>
+    <form>
+        <table cellpadding="5">
+            <tr>
+                <td><label for="first-name">First Name:</label></td>
+                <td><input type="text" id="first-name" placeholder="Enter Your First Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="last-name">Last Name:</label></td>
+                <td><input type="text" id="last-name" placeholder="Enter Your Last Name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" placeholder="Enter Your Email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" placeholder="Enter Your Password" required></td>
+            </tr>
+            <tr>
+                <td><label for="cnf-password">Confirm Password:</label></td>
+                <td><input type="password" id="cnf-password" placeholder="Confirm Your Password" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob"></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile Number:</label></td>
+                <td><input type="text" id="mobile" placeholder="Enter Your Mobile Number"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">SignUp</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
 </body>
 </html>
