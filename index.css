@@ -1,17 +1,12 @@
-.relative-pos{
-    background-color: blue;
-    position:relative;
-    height: 200px;
+.float-left{
+    float: left;
+    margin: 10px;
 }
-.fixed-pos{
-    background-color: black;
-    position: fixed;
-    height: 200px;
-    width: 200px;
+.float-right{
+    float: right;
+    margin: 10px;
 }
-.absolute-pos{
-    background-color: gray;
-    position:absolute;
-    height: 200px;
-    width: 300px;
+img{
+    border: 50px solid;
+    opacity: 0.1;
 }
