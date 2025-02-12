@@ -1,6 +1,17 @@
-.external{
-    height: 55px;
-        background-color: yellow;
-        color: green;
-        font-size: 45px;
+.relative-pos{
+    background-color: blue;
+    position:relative;
+    height: 200px;
+}
+.fixed-pos{
+    background-color: black;
+    position: fixed;
+    height: 200px;
+    width: 200px;
+}
+.absolute-pos{
+    background-color: gray;
+    position:absolute;
+    height: 200px;
+    width: 300px;
 }
