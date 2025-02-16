@@ -31,3 +31,41 @@
 // set=new Set(["Hello"])
 // //the hello can be added using set.add("hello")
 // console.log(set)// print as a string
+//OPERATORS
+
+/*
+Assignment_operators=[=]
+unary_operator=[++,--]
+Arithmatic_operator=[+,-,*,/,%]
+logical_operator=[&&,||,!]
+relational_or_condotional_operatior=[>,>=,<,<=,==,===,!=,!==]
+bitwise_operator=[&,|,~,^,<<,>>]
+combination_of_operators=[+=,-=]
+dot_operator=[.]
+*/
+
+/*
+console.log(5&&10)
+console.log(true&&10)
+console.log(false&&10)
+console.log(false || 10)
+console.log(true|| 5)
+console.log(5||10)
+console.log(false&& true)
+console.log(true&&false)
+console.log(false||true)
+console.log(true||false)
+*/
+
+//relational operator
+a='5'
+b=5
+console.log(a==b)
+console.log(a===b)
+
+for(i of object){
+    console.log(i)
+}
+for(key of Object.entries(object1)){
+    console.log(key,value)
+}
