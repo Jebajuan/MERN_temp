@@ -1,51 +1,44 @@
-// var testarrowfunction=()=>{
-//     console.log("Test Arrow Function");
+/* Callback function:
+            Its nothing but a function call inside another function\
+*/
+// function SjitCollege(message){
+//     console.log(message)
+//     callbacksSjit()
 // }
-// testarrowfunction()
-
-//1.variable refer to variables
-//2. arrow function=>
-    //var functionname=()=>{}
-
-//scoping
-
-// var a=10;
-// console.log(a);
-// //scoping starts
-// {
-//     let a=20;
-//     console.log(a);
-//     const b=30;
-//     console.log(b);
-//     let c=40;
-//     console.log(c);
-//     var e=50;
-//     console.log(e);
-//     a=40;
-//     console.log(a);
-//     f=30 //if nothing is given var is default
+// function callbacksSjit(){
+//     console.log("Welcome back to Sjit")
 // }
-// console.log(a);
-// console.log(e);
-// console.log(f)
-// var is global
-//let is local 
-//use var for while loop and let for for loops
-
-// var a=10;
-// while(a<12){
-//     console.log(a);
+// SjitCollege("Welcome to Sjit",callbacksSjit)
+// function formSubmission(message,cbFun){
+//     cbFun()
+//     console.log(message)
 // }
-// console.log(a);
-
-//ternary operator
-// a=10;
-// console.log((a%2)?"odd":"Even");
-
-//spread operator
-stud1year=["user1","user2","user3"];
-stud2year=["user4","user5","user6"];
-stud3year=["user7","user8","user9"];
-stud4year=["user10","user11","user12"];
-studdb=[...stud1year,...stud2year,...stud3year,...stud4year]
-console.log(studdb)
+// function formValidation(){
+//     console.log("Form Validation successfully")
+// }
+// formSubmission("Form Submitted successfully",formValidation)
+// function formSubmission(message,cbFun){
+//     if (cbFun()){
+//         console.log("Form Submitted Successfully")
+//     }
+//     else{
+//         console.log("Form Submission UnSuccessful")
+//     }
+// }
+// function formValidation(){
+//     console.log("Form Validation successfully")
+//     return true
+// }
+// formSubmission("Form Submitted successfully",formValidation)
+// Async
+// async function asAw(){
+//     console.log("Hello")
+// }
+// console.log(asAw())
+async function asAw() {
+    setTimeout(function(){
+    },5000)
+}
+console.log(asAw().then((res)=>{
+    console.log(res)
+}))
