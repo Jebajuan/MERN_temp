@@ -11,17 +11,6 @@ const Navbar = () => {
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/gallery'>Gallery</Link></li>
             <li><Link to='/contact'>Contact</Link></li>
-            <div>
-              <span>Hooks</span>
-              <ol>
-                <li>
-                  <Link to='/'>UseState</Link>
-                </li>
-                <li>
-                  <Link to='/useeffect'>UseEffect</Link>
-                </li>
-              </ol>
-            </div>
             <div className="dropdown" onMouseEnter={()=>setDropdown(true)} onMouseLeave={()=>setDropdown(false)}>
               
               <span className="link">Hooks</span>
@@ -32,9 +21,12 @@ const Navbar = () => {
                   <li><Link className="dropdown-link" to="/use-effect-api">UseEffectAPI</Link></li>
                   <li><Link className="dropdown-link" to="/use-ref">UseRef</Link></li>
                   <li><Link className="dropdown-link" to="/use-memo">UseMemo</Link></li>
+                  <li><Link className="dropdown-link" to="/callback">useCallback</Link></li>
+                  <li><Link className="dropdown-link" to='/memoize'>Memoize</Link></li>
                 </ol>
               )}
             </div>
+            <li><Link to='/hoc'>HoC</Link></li>
             <li><Link to='/contact'>Contact</Link></li>
             <li><Link to='/login'>Login</Link></li>
             <li><Link to='/signup'>Signup</Link></li>
