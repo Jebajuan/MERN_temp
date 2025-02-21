@@ -7,9 +7,9 @@ var styling={
     color:"white"
 }
   return (
-    <div style={styling}>
+    <div>
         <h1>Home Page</h1>
-    <h2>the props is :{props.props},{props.sjit}</h2>
+        
     </div>
   )
 }

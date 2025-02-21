@@ -9,6 +9,7 @@ import Login from "./components/FunctionalComponent/Login";
 import Signup from "./components/FunctionalComponent/Signup";
 import Navbar from "./components/FunctionalComponent/navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UseEffect from "./components/FunctionalComponent/Hooks/UseEffect";
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path='useeffect' element={<UseEffect/>} />
         </Routes>
       </BrowserRouter>
-      <h1>Welcome to SJIT</h1>
     </>
   );
 }
