@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 
 function slowFunction(num){
     for(var i=0; i<=100;i++){}
+    for(var i=0;i<=150000000;i++){}
     return num*2;
 }
 
@@ -27,6 +28,7 @@ const UseMemo = () => {
         <h2>The Number is {number}</h2>
         <h2>The number is {slowFunction(number)}</h2>
         <h2>The number is {doublingUpANumber(number)} </h2>
+        <h2>The number is {doublingUpANumber}</h2>
         </div>
     </>
     )
