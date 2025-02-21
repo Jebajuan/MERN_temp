@@ -10,6 +10,10 @@ import Signup from "./components/FunctionalComponent/Signup";
 import Navbar from "./components/FunctionalComponent/navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UseEffect from "./components/FunctionalComponent/Hooks/UseEffect";
+import UseState from "./components/FunctionalComponent/Hooks/UseState";
+import UseEffectAPI from "./components/FunctionalComponent/Hooks/UseEffectAPI";
+import UseRef from "./components/FunctionalComponent/Hooks/UseRef";
+import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo";
 
 function App() {
   return (
@@ -22,7 +26,11 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path='useeffect' element={<UseEffect/>} />
+          <Route path='/use-effect' element={<UseEffect/>} />
+          <Route path='/use-state' element={<UseState/>} />
+          <Route path="/use-effect-api" element={ <UseEffectAPI/> } />
+          <Route path="/use-ref" element={<UseRef/>} />
+          <Route path="/use-memo" element={<UseMemo/>} />
         </Routes>
       </BrowserRouter>
     </>

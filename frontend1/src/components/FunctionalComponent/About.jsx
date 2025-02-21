@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function About() {
   var initial=0
   // var [num,setNum]=useState(initial)
-  var [num,setNum]=useState(0)
+  var [num,setNum]=useState(initial)
   function handleDecrement(){
     setNum(num-1)
   }
