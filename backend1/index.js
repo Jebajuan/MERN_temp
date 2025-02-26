@@ -4,6 +4,9 @@ const dotenv = require("dotenv");
 const Signup = require("./models/signupSchema");
 const app = express();
 const bcryt=require('bcrypt')
+const cors=require('cors')
+
+app.use(cors())
 app.use(express.json())
 const PORT = 3001;
 dotenv.config();
@@ -22,22 +25,22 @@ app.get("/", (req, res) => {
 });
 
 app.post("/login",async (req,res)=>{
-  const{Email, password} = req.body;
   try {
-    const email=await Signup.findOne({Email})
-    if(!email){
-      return res.status(400).json({message:"Invalid email"})
+    const{Email, password} = req.body;
+    // console.log(email)
+    const user=await Signup.findOne({Email})
+    if(!user){
+      return res.status(400).json({message:"Invalid email",isLoggedIn:false})
     }
-
-    const isMatch=await bcryt.compare(password,email.password)
+    const isMatch=await bcryt.compare(password,user.password)
     if(!isMatch){
-      return res.status(400).json({message:"Invalid email or password"})
+      return res.status(400).json({message:"Invalid email or password",isLoggedIn:false})
     }
 
-    return res.status(200).json({message:"Login Successful"})
+    return res.status(200).json({message:"Login Successful",isLoggedIn:true})
 
   } catch (error) {
-    res.status(400).json({message:"Login Failed"})
+    res.status(400).json({message:"Login Failed",isLoggedIn:false})
   }
 })
 
