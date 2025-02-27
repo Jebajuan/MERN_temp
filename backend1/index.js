@@ -5,8 +5,8 @@ const Signup = require("./models/signupSchema");
 const app = express();
 const bcryt=require('bcrypt')
 const cors=require('cors')
-
 app.use(cors())
+const jwt=require('jsonwebtoken')
 app.use(express.json())
 const PORT = 3001;
 dotenv.config();
@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to server</h1>");
 });
 
+
 app.post("/login",async (req,res)=>{
   try {
     const{Email, password} = req.body;
@@ -36,10 +37,17 @@ app.post("/login",async (req,res)=>{
     if(!isMatch){
       return res.status(400).json({message:"Invalid email or password",isLoggedIn:false})
     }
+    const payload = {
+      firstName: user.firstName,
+      email:user.email,
 
-    return res.status(200).json({message:"Login Successful",isLoggedIn:true})
+    }
+    const token=jwt.sign(payload,process.env.SECRET_KEY,{expiresIn:"1m"})
+    console.log(token)
+    return res.status(200).json({message:"Login Successful",isLoggedIn:true,token:token})
 
   } catch (error) {
+    console.log(error)
     res.status(400).json({message:"Login Failed",isLoggedIn:false})
   }
 })
